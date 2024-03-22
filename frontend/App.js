@@ -18,6 +18,7 @@ export default function App() {
       <Stack.Screen name='system information' component={ViewContent}/>
       <Stack.Screen name='mointor sytem' component={ControlSystem}/>
     </Stack.Navigator>
+    
   </NavigationContainer>
   );
 }

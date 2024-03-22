@@ -42,6 +42,7 @@ const Register = () => {
         placeholder="Password"
         value={password}
         onChangeText={setpassword}
+        secureTextEntry={true}
       />
       <TouchableOpacity style={styles.buttons} onPress={sendDataToBackend}>
   <Text>Register</Text>
