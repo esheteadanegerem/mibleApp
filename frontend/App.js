@@ -15,8 +15,8 @@ export default function App() {
       <Stack.Screen name="well come to control irrigation" component={HomeScreen} style={styles.home}/>
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name='system information' component={ViewContent}/>
-      <Stack.Screen name='mointor sytem' component={ControlSystem}/>
+      <Stack.Screen name='ViewContent' component={ViewContent}/>
+      <Stack.Screen name='control' component={ControlSystem}/>
     </Stack.Navigator>
     
   </NavigationContainer>

@@ -23,9 +23,9 @@ const Login = () => {
       };
   return (
     <View style={loginStyles.main}>
-
     <TextInput style={loginStyles.label}
       placeholder="Email"
+      
       value={email}
       onChangeText={setemail}
     />
@@ -34,7 +34,7 @@ const Login = () => {
       value={password}
       onChangeText={setpassword}
     />
-    <TouchableOpacity style={loginStyles.buttons} onPress={sendDataToBackend}>
+    <TouchableOpacity style={loginStyles.buttons} onPress={() => navigation.navigate('ViewContent')}>
 <Text style={loginStyles.logged}>Login</Text>
 </TouchableOpacity>
   </View>
