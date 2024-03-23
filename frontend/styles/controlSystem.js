@@ -67,6 +67,15 @@ export const styles = StyleSheet.create({
     touch2:{
       borderWidth:3,
       borderRadius:12,
+    margin:30,
+      height:49,
+      textAlign:'center',
+      alignItems:'center'
+    },
+    text4:{
+      marginStart:50,
+      color:'black',
+      marginTop:12,
     }
 
  

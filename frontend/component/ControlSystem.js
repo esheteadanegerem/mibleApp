@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, TextInput,ScrollView } from "react-native";
 import { styles } from "../styles/controlSystem";
 import { useState, useEffect } from "react";
-
+import { useNavigation } from "@react-navigation/native";
 //logic to on and off the system
 function onToOff() {
   console.log("the system is on please click to turn of ");
@@ -12,7 +12,7 @@ function offToOn() {
 }
 
 const ControlSystem = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   const [turnSystemOn, setTurnSystemOn] = useState(false);
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
@@ -65,7 +65,7 @@ const ControlSystem = () => {
           value={frequency}
           onChangeText={setFrequency}
           placeholder="Frequency"
-          keyboardType="numeric"
+          keyboardType="numeric"//this is string changed later
           style={styles.textInput}
         />
       </View>
@@ -85,12 +85,14 @@ const ControlSystem = () => {
         <View style={styles.main3}>
           <Text style={styles.text3}>Zone C</Text>
           <TextInput  style={styles.input1} placeholder="Watering duration"></TextInput>
-          </View>
-          
+          </View>    
       </View>
       <Text style={styles.text1}>Others</Text>
-      <TouchableOpacity style={styles.touch2}>
-        <Text>Additional settings</Text>
+      <TouchableOpacity 
+      style={styles.touch2}
+       onPress={()=>{navigation.navigate('setting')}} 
+        >
+        <Text style={styles.text4}>Additional settings</Text>
       </TouchableOpacity>
       </ScrollView>
     </View>
