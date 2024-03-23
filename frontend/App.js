@@ -7,6 +7,7 @@ import Register from './component/Register';
 import Login from './component/Login';
 import ControlSystem from './component/ControlSystem';
 import ViewContent from './component/ViewContent';
+//import Control from './component/Control';
 const Stack = createStackNavigator();
 export default function App() {
   return (
@@ -16,7 +17,8 @@ export default function App() {
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name='ViewContent' component={ViewContent}/>
-      <Stack.Screen name='control' component={ControlSystem}/>
+      <Stack.Screen name='Control System' component={ControlSystem}/>
+      {/* <Stack.Screen name='control' component={Control}/> */}
     </Stack.Navigator>
     
   </NavigationContainer>
