@@ -1,10 +1,10 @@
 import React from 'react'
-import { View } from 'react-native'
-import Styles from '../styles/controlSystem'
+import { View,Text } from 'react-native'
+import{ styles }from '../styles/controlSystem'
 const ControlSystem = () => {
   return (
-    <View>
-      
+    <View style={styles.main}>
+     <Text style={styles.text1}>Turn System On/Off</Text> 
     </View>
   )
 }
