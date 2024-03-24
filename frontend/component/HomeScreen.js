@@ -33,12 +33,21 @@ const HomeScreen = ({ navigation }) => {
           <Image style={styles.image1}
            source={image1}/>
      
+
+
+     <TouchableOpacity  
+        style={styles.touch1}
+        onPress={() => navigation.navigate('Schedule Managment')}
+      >
+        <Text style={styles.text1}>Manage Your Water Schedule</Text>
+      </TouchableOpacity>
       </ImageBackground>
       
    
       </View>
-     
+      
     </View>
+    
   );
 };
 

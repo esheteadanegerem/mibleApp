@@ -68,6 +68,16 @@ const styles=StyleSheet.create(({
       image1:{
         height:200,
         marginStart:50
+      },
+      touch1:{
+        backgroundColor:'#00bfff',
+        margin:40,
+        padding:30,
+        borderRadius:20,
+      
+      },
+      text1:{
+        fontSize:20
       }
 
       

@@ -9,6 +9,7 @@ import ControlSystem from './component/ControlSystem';
 import ViewContent from './component/ViewContent';
 import Setting from './component/Setting';
 //import Control from './component/Control';
+import ScheduleManagment from './component/ScheduleManagment';
 const Stack = createStackNavigator();
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
       <Stack.Screen name='Control System' component={ControlSystem}/>
       {/* <Stack.Screen name='control' component={Control}/> */}
       <Stack.Screen name='setting' component={Setting}/>
+      <Stack.Screen name='Schedule Managment' component={ScheduleManagment}/>
     </Stack.Navigator>
     
   </NavigationContainer>
