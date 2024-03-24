@@ -75,7 +75,6 @@ const ControlSystem = () => {
           <Text style={styles.text3}>Zone A</Text>
           <TextInput  style={styles.input1} placeholder="Watering duration"></TextInput>
           
-          
           </View>
         <View  style={styles.main3}>
           <Text style={styles.text3}>Zone B</Text>
