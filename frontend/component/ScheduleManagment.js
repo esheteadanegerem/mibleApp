@@ -76,12 +76,13 @@ const ScheduleManagment = () => {
                         placeholder="Enter duration in minutes"
                     />
                     <Text style={styles.text3}>Time of Day</Text>
-                    {/* Time picker components for start and end time */}
-                    <View>
+                  
+                   <View style={styles.main4}>
+                   <View style={styles.main3}>
                         <View>
                             <Button onPress={showDatepicker} title="Show date picker!" />
                         </View>
-                        <View>
+                        <View style={styles.main3}>
                             <Button onPress={showTimepicker} title="Show time picker!" />
                         </View>
                         {show && (
@@ -95,6 +96,8 @@ const ScheduleManagment = () => {
                             />
                         )}
                     </View>
+
+                   </View>
                  
                     <Button title="Save" onPress={handleSave} />
                
@@ -102,24 +105,28 @@ const ScheduleManagment = () => {
                 </View>
 
                 <Text style={styles.text1}>Existing Schedules</Text>
-                <Card>
+                <Card style={styles.card1}>
 
-                    <Text>Morning Watering</Text>
-                    <Text>Frequence</Text>
-                    <Text>Duration</Text>
-                    <Text>Time</Text>
-                    <Button title="Edit" onPress={handleSave} />
-                    <Button title="Delete" onPress={handleSave} />
+                    <Text style={styles.text4}>Morning Watering</Text>
+                    <Text style={styles.text5}>Frequence:Daily</Text>
+                    <Text style={styles.text5}>Duration:405min</Text>
+                    <Text style={styles.text5}>Time:7:30</Text>
+                   <View style={styles.main2}>
+                   <View style={styles.buttons}><Button title="Edit" onPress={handleSave} /></View>
+                  <View  style={styles.buttons}><Button  title="Delete" onPress={handleSave} /></View>
+                   </View>
                
             </Card> 
-            <Card>
+            <Card style={styles.card1}>
 
-                    <Text>Morning Watering</Text>
-                    <Text>Frequence</Text>
-                    <Text>Duration</Text>
-                    <Text>Time</Text>
-                    <Button title="Edit" onPress={handleSave} />
-                    <Button title="Delete" onPress={handleSave} />
+                    <Text style={styles.text4}>Morning Watering</Text>
+                    <Text style={styles.text5}>Frequence</Text>
+                    <Text style={styles.text5}>Duration</Text>
+                    <Text style={styles.text5}>Time</Text>
+                    <View style={styles.main2}>
+                   <View style={styles.buttons}><Button title="Edit" onPress={handleSave} /></View>
+                  <View  style={styles.buttons}><Button  title="Delete" onPress={handleSave} /></View>
+                   </View>
                
             </Card> 
             </ScrollView>

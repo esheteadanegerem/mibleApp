@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button ,Row,Image,ImageBackground} from 'react-native';
+import { View, Text, Button ,Row,Image,ImageBackground,ScrollView} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import styles from '../styles/homeScreen';
@@ -8,6 +8,7 @@ import image1 from '../assets/image/home2.jpeg'
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
+      <ScrollView>
      <View style={styles.container1}>
       <View style={styles.inner}>
         <Text style={styles.inner1}>Let Us make our farmer digital worker</Text>
@@ -45,7 +46,7 @@ const HomeScreen = ({ navigation }) => {
       
    
       </View>
-      
+      </ScrollView>
     </View>
     
   );

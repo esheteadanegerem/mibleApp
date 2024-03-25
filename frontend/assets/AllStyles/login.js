@@ -8,7 +8,7 @@ export const loginStyles = StyleSheet.create({
    
     height: 40,
     width: "100%",
-    backgroundColor: "#FFC0CB",
+    backgroundColor: "white",
    
     width: "100%",
     height: 45,
@@ -55,6 +55,10 @@ export const loginStyles = StyleSheet.create({
       width:150
      
 
+  },
+  image:{
+    height:300,
+    marginBottom:10,
   }
 });
 

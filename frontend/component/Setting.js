@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text,TouchableOpacity,TextInput } from "react-native";
+import { View, Text,TouchableOpacity,TextInput,ScrollView } from "react-native";
 import { RadioButton,Card } from "react-native-paper"; // Assuming RadioButton is from react-native-paper
 import { styles } from "../styles/setting";
 
@@ -9,6 +9,7 @@ const Setting = () => {
  console.log(checked)
   return (
     <View style={styles.main}>
+      <ScrollView>
       <Text style={styles.text1}>Unit Of measurment</Text>
       <View style={styles.main1}>
         <Text style={styles.text2}>Metrics</Text>
@@ -74,7 +75,7 @@ const Setting = () => {
       <TouchableOpacity style={styles.touch1}>
         <Text style={styles.text3}>Save</Text>
       </TouchableOpacity>
-
+      </ScrollView>
     </View>
   );
 };
