@@ -9,6 +9,7 @@ const Setting = () => {
  console.log(checked)
   return (
     <View style={styles.main}>
+      
       <ScrollView>
       <Text style={styles.text1}>Unit Of measurment</Text>
       <View style={styles.main1}>
