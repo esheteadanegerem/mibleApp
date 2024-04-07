@@ -59,6 +59,7 @@ export const loginStyles = StyleSheet.create({
   image:{
     height:300,
     marginBottom:10,
-  }
+  },
+
 });
 

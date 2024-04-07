@@ -62,6 +62,10 @@ export const styles=StyleSheet.create({
        inputs:{
         marginStart:30,
         fontSize:20
+       },
+       radio2:{
+        marginTop:20,
+        marginStart:110
        }
 
 })

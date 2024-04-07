@@ -9,7 +9,6 @@ const Setting = () => {
  console.log(checked)
   return (
     <View style={styles.main}>
-      
       <ScrollView>
       <Text style={styles.text1}>Unit Of measurment</Text>
       <View style={styles.main1}>
@@ -54,7 +53,7 @@ const Setting = () => {
       <Text style={styles.text1}>Notification Setting</Text>
       <View style={styles.main1}>
         <Text style={styles.text4}>Weather   Alert</Text>
-        <View style={styles.radio1}>
+        <View style={styles.radio2}>
           <RadioButton
             value="Metrics"
             status={checked === "Metrics" ? "checked" : "unchecked"}
@@ -65,7 +64,7 @@ const Setting = () => {
       </View>
       <View style={styles.main1}>
         <Text style={styles.text4}>Apdate System</Text>
-        <View style={styles.radio1}>
+        <View style={styles.radio2}>
           <RadioButton
             value="Imperial"
             status={checked === "Imperail" ? "checked" : "unchecked"}
