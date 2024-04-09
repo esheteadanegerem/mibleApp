@@ -8,6 +8,8 @@ import Login from './component/Login';
 import ControlSystem from './component/ControlSystem';
 import ViewContent from './component/ViewContent';
 import Setting from './component/Setting';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 //import Control from './component/Control';
 import ScheduleManagment from './component/ScheduleManagment';
 const Stack = createStackNavigator();
@@ -15,6 +17,7 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}>
     <Stack.Navigator initialRouteName="Home "  >
+      
       <Stack.Screen name="well come to control irrigation" component={HomeScreen} style={styles.home}/>
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Login" component={Login} />
