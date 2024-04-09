@@ -1,20 +1,31 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "../styles/viewContent";
 import { useNavigation } from "@react-navigation/native";
+import {DB,ref,onValue} from '../firebase'
+import { snapshotEqual } from "firebase/firestore";
 const ViewContent = () => {
-  //code to fecth the content of the irrigation sytem
+
   const navigation = useNavigation();
-  const data = ["25°C", "60%", "sunny"];
-  const moisterLevel = ["75%", "80%"];
-  const Status = ["active", 60];
+  const[temp,setTemp]=useState('')
+  const[himd,setHimid]=useState('')
+  const[moist,setPressur]=useState('')
+  useEffect(()=>{
+    const data=ref(DB)
+    onValue(data,(snapshot)=>{
+      setTemp(snapshot.val().temp)
+      setPressur(snapshot.val().moist)
+      setHimid(snapshot.val().humid)
+    })
+  },[])
   return (
     <View style={styles.main}>
       <Text style={styles.text1}>Weather Condition</Text>
       <View style={styles.main1}>
-        <Text style={styles.text2}> Temprature:{data[0]}</Text>
-        <Text style={styles.text2}>Humidity:{data[1]}</Text>
-        <Text style={styles.text2}>forcast:{data[2]}</Text>
+        <Text style={styles.text2}> Temprature:{temp}</Text>
+        <Text style={styles.text2}>Humidity:{himd}</Text>
+        <Text style={styles.text2}>pressure:{moist}</Text>
       </View>
       <Text style={styles.text1}>Soil Moisture Levels</Text>
       <View style={styles.row}>

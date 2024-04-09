@@ -8,27 +8,28 @@ import { TouchableOpacity } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from '../styles/register';
-import { auth } from '../firebase';
-import { backurl } from '../globalVariable/variable';
-
-
-
+import { FIREBASE_AUTH } from '../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 const Register = () => {
   const navigation = useNavigation();
   const [name, setname] = useState('');
   const [email, setemail] = useState('');
   const [password, setpassword] = useState('');
+const auth=FIREBASE_AUTH
+  const handleRegister = async() => {
+    try{
+      const user=await createUserWithEmailAndPassword(auth,email,password)
+      console.log(user)
+      alert('u are rgisiterd')
+      navigation.navigate('ViewContent');
+    }
+    catch(err){
+      console.log('error occure')
 
-  const handleRegister = () => {
-    auth.createUserWithEmailAndPassword(email, password)
-      .then((result) => {
-        console.log(result);
-        // Navigate to the "ViewContent" screen after successful registration
-        navigation.navigate('ViewContent');
-      })
-      .catch((err) => {
-        alert('An error occurred during registration');
-      });
+    }
+
+   
   };
 
   return (

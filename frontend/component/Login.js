@@ -1,28 +1,30 @@
 import React,{useState,useEffect} from 'react'
 import { View } from 'react-native'
 import { TextInput,TouchableOpacity ,Text,Image} from 'react-native'
-import {axios} from 'axios'
+
 import { useNavigation } from '@react-navigation/native';
 import {loginStyles} from '../assets/AllStyles/login'
-//import { useNavigation } from 'expo-router';
-import { backurl } from '../globalVariable/variable'
 import login from '../assets/image/login.jpeg'
-import { styles } from '../styles/scheduleManagment';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { FIREBASE_AUTH } from '../firebase';
 
 
 const Login = () => {
   const navigation=useNavigation()
     const[email,setemail]=useState('')
     const[password,setpassword]=useState('')
-    const sendDataToBackend = async () => {
-        try {
-          const response = await axios.post(`http://${backurl}/register`, {email:email,password:password});
-          console.log('Data sent successfully:', response.data);
-          navigation.navigate('ViewContent')
-         
-        } catch (error) {
-          console.error('Error sending data:', error);
-        }
+    const auth=FIREBASE_AUTH
+    const handleLogin= async () => {
+      try{
+        const loinUser=await signInWithEmailAndPassword(auth,email,password)
+        console.log('user login')
+        navigation.navigate('ViewContent')
+      }
+      catch(err){
+        console.log(err,'error during login page')
+        alert('invalid credintails')
+      }
+       
       };
   return (
 
@@ -39,7 +41,7 @@ const Login = () => {
       value={password}
       onChangeText={setpassword}
     />
-    <TouchableOpacity style={loginStyles.buttons} onPress={() => navigation.navigate('ViewContent')}>
+    <TouchableOpacity style={loginStyles.buttons} onPress={handleLogin}>
 <Text style={loginStyles.logged}>Login</Text>
 </TouchableOpacity>
   </View>
