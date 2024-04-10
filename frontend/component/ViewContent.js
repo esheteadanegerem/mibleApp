@@ -31,17 +31,17 @@ const ViewContent = () => {
       <View style={styles.row}>
         <View style={styles.column}>
           <Text style={styles.text3}>Zone A</Text>
-          <Text style={styles.text4}>Moisture Level: {moisterLevel[0]}</Text>
+          <Text style={styles.text4}>Moisture Level: {moist}</Text>
         </View>
         <View style={styles.column}>
           <Text style={styles.text3}>Zone B</Text>
-          <Text style={styles.text4}>Moisture Level:{moisterLevel[1]}</Text>
+          <Text style={styles.text4}>Moisture Level:{moist}</Text>
         </View>
       </View>
       <Text style={styles.text1}>Irrigation Status</Text>
       <View style={styles.main2}>
-        <Text style={styles.text2}>Status:{Status[0]}</Text>
-        <Text style={styles.text2}>Duration:{Status[1]}min</Text>
+        <Text style={styles.text2}>Status:{moist}</Text>
+        <Text style={styles.text2}>Duration:{moist}min</Text>
       </View>
       <TouchableOpacity
         style={styles.touch1}
