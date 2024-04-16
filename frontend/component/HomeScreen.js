@@ -5,9 +5,11 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import styles from '../styles/homeScreen';
 import image from '../assets/image/hom1.jpeg'
 import image1 from '../assets/image/home2.jpeg'
+
 const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
+   
       <ScrollView>
      <View style={styles.container1}>
       <View style={styles.inner}>
@@ -17,6 +19,9 @@ const HomeScreen = ({ navigation }) => {
         style={styles.button}
         onPress={() => navigation.navigate('Register')}
       >
+
+
+
         <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
       <TouchableOpacity
