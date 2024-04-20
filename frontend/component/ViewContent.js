@@ -31,7 +31,7 @@ const ViewContent = () => {
   },[])
   return (
     <View style={styles.main}>
-      <Text style={styles.text1}>Weather Condition</Text>
+     
       <Text style={styles.text1}>Weather Condition</Text>
   <View style={{  }}>
     {/* Temperature and Humidity */}
